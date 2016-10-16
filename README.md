@@ -10,7 +10,7 @@
 
 ## Getting Started
 
-#### Your ```.npmrc``` file
+#### Your .npmrc file
 ```python=python2.7```
 ```msvs_version=2015```
 
