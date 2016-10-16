@@ -11,9 +11,8 @@
 ## Getting Started
 
 #### Your .npmrc file
-```python=python2.7```   
-
-```msvs_version=2015```
+- python=python2.7 
+- msvs_version=2015
 
 ## Developing
 
