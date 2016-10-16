@@ -1,0 +1,7 @@
+<div>
+  Last Name: <input type="text" name="lname" ng-model="flowCtrl.dataModel.lname" required>
+</div>
+
+<a href="/flow/done" ng-show="flow.lname.$valid" ng-click="flowCtrl.setCurrentPlace(4); flowCtrl.postData();"><button type="submit">next</button></a>
+
+<pre>{{flowCtrl.dataModel}}</pre>

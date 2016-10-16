@@ -1,0 +1,46 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700';
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
+
+/**
+ *Font Awesome Fonts
+ */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/assets/fonts/font-awesome/fontawesome-webfont.eot?v=4.1.0');
+  src: url('/assets/fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
+  url('/assets/fonts/font-awesome/fontawesome-webfont.woff?v=4.1.0') format('woff'),
+  url('/assets/fonts/font-awesome/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
+  url('/assets/fonts/font-awesome/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
+ * App-wide Styles
+ */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Component styles are injected through gulp */
+/* inject:css */
+
+@import 'main/main.css';
+
+@import '../controllers/admin/admin.css';
+
+@import '../controllers/app/flow/flow.css';
+
+@import '../layout/footer/footer.css';
+
+@import '../layout/navbar/navbar.css';
+
+@import '../services/modal/modal.css';
+
+/* endinject */
