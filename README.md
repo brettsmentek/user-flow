@@ -6,7 +6,9 @@
 - [Node.js and npm](nodejs.org) Node >= 4.x.x, npm >= 2.x.x
 - [Gulp](http://gulpjs.com/) (`npm install --global gulp`)
 - [SQLite](https://www.sqlite.org/quickstart.html)
-- [Initial setup instructions](http://angular-fullstack.github.io/generator-angular-fullstack/Getting_Started/Prerequisites.html)
+
+You will need to follow the node-gyp installation instructions here:
+- [node-gyp setup instructions](http://angular-fullstack.github.io/generator-angular-fullstack/Getting_Started/Prerequisites.html)
 
 ## Getting Started
 
