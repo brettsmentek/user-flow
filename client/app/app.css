@@ -1,6 +1,18 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700';
-@import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
-@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
+@import '~bootstrap/dist/css/bootstrap.css';
+/**
+ * Bootstrap Fonts
+ */
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/assets/fonts/bootstrap/glyphicons-halflings-regular.eot');
+  src: url('/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/bootstrap/glyphicons-halflings-regular.woff') format('woff'),
+  url('/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'),
+  url('/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+@import '~font-awesome/css/font-awesome.css';
 
 /**
  *Font Awesome Fonts
@@ -28,19 +40,11 @@
   padding: 0.2em 0;
 }
 
+
 /* Component styles are injected through gulp */
 /* inject:css */
-
+@import 'admin/admin.css';
 @import 'main/main.css';
-
-@import '../controllers/admin/admin.css';
-
-@import '../controllers/app/flow/flow.css';
-
-@import '../layout/footer/footer.css';
-
-@import '../layout/navbar/navbar.css';
-
-@import '../services/modal/modal.css';
-
+@import '../components/footer/footer.css';
+@import '../components/modal/modal.css';
 /* endinject */

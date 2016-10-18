@@ -35,12 +35,6 @@ export default function(sequelize, DataTypes) {
         notEmpty: true
       }
     },
-    data: {
-      type: DataTypes.STRING,
-      validate: {
-        notEmpty: true
-      }
-    },
     provider: DataTypes.STRING,
     salt: DataTypes.STRING
 

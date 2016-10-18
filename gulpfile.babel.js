@@ -1,4 +1,4 @@
-// Generated on 2016-09-25 using generator-angular-fullstack 4.0.5
+// Generated on 2016-10-18 using generator-angular-fullstack 4.1.0
 'use strict';
 
 import _ from 'lodash';
@@ -32,11 +32,11 @@ const paths = {
         scripts: [
             `${clientPath}/**/!(*.spec|*.mock).js`
         ],
-        styles: [`${clientPath}/{app,components,controllers,layout,services}/**/*.css`],
+        styles: [`${clientPath}/{app,components}/**/*.css`],
         mainStyle: `${clientPath}/app/app.css`,
-        views: `${clientPath}/{app,components,controllers,layout,services}/**/*.html`,
+        views: `${clientPath}/{app,components}/**/*.html`,
         mainView: `${clientPath}/index.html`,
-        test: [`${clientPath}/{app,components,controllers,layout,services}/**/*.{spec,mock}.js`],
+        test: [`${clientPath}/{app,components}/**/*.{spec,mock}.js`],
         e2e: ['e2e/**/*.spec.js']
     },
     server: {
@@ -204,9 +204,6 @@ gulp.task('inject:css', () => {
                     let newPath = filepath
                         .replace(`/${clientPath}/app/`, '')
                         .replace(`/${clientPath}/components/`, '../components/')
-                        .replace(`/${clientPath}/layout/`, '../layout/')
-                        .replace(`/${clientPath}/controllers/`, '../controllers/')
-                        .replace(`/${clientPath}/services/`, '../services/')
                         .replace(/_(.*).css/, (match, p1, offset, string) => p1);
                     return `@import '${newPath}';`;
                 }

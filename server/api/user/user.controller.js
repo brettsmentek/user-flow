@@ -115,28 +115,6 @@ export function changePassword(req, res) {
 }
 
 /**
- * Change a users data
- */
-export function changeData(req, res) {
-  var userId = req.user._id;
-  var data = String(req.body.data);
-
-  return User.find({
-    where: {
-      _id: userId
-    }
-  })
-    .then(user => {
-      user.data = data;
-      return user.save()
-        .then(() => {
-          res.status(204).end();
-        })
-        .catch(validationError(res));
-    });
-}
-
-/**
  * Get my info
  */
 export function me(req, res, next) {
@@ -150,7 +128,6 @@ export function me(req, res, next) {
       '_id',
       'name',
       'email',
-      'data',
       'role',
       'provider'
     ]

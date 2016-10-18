@@ -12,9 +12,9 @@ var LoginPage = function() {
   form.submit = form.element(by.css('.btn-login'));
 
   this.login = function(data) {
-    for(var prop in data) {
+    for (var prop in data) {
       var formElem = form[prop];
-      if(data.hasOwnProperty(prop) && formElem && typeof formElem.sendKeys === 'function') {
+      if (data.hasOwnProperty(prop) && formElem && typeof formElem.sendKeys === 'function') {
         formElem.sendKeys(data[prop]);
       }
     }

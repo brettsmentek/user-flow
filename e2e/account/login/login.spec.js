@@ -1,13 +1,13 @@
 'use strict';
 
 var config = browser.params;
-var UserModel = require(`${config.serverConfig.root}/server/sqldb`).User;
+var UserModel = require(config.serverConfig.root + '/server/sqldb').User;
 
 describe('Login View', function() {
   var page;
 
   var loadPage = function() {
-    let promise = browser.get(`${config.baseUrl}/login`);
+    let promise = browser.get(config.baseUrl + '/login');
     page = require('./login.po');
     return promise;
   };
@@ -41,6 +41,7 @@ describe('Login View', function() {
   });
 
   describe('with local auth', function() {
+
     it('should login a user and redirecting to "/"', function() {
       return page.login(testUser).then(() => {
         var navbar = require('../../components/navbar/navbar.po');
@@ -48,10 +49,10 @@ describe('Login View', function() {
         return browser.wait(
           () => element(by.css('.hero-unit')),
           5000,
-          'Didn\'t find .hero-unit after 5s'
+          `Didn't find .hero-unit after 5s`
         ).then(() => {
-          expect(browser.getCurrentUrl()).to.eventually.equal(`${config.baseUrl}/`);
-          expect(navbar.navbarAccountGreeting.getText()).to.eventually.equal(`Hello ${testUser.name}`);
+          expect(browser.getCurrentUrl()).to.eventually.equal(config.baseUrl + '/');
+          expect(navbar.navbarAccountGreeting.getText()).to.eventually.equal('Hello ' + testUser.name);
         });
       });
     });
@@ -59,7 +60,7 @@ describe('Login View', function() {
     describe('and invalid credentials', function() {
       before(function() {
         return loadPage();
-      });
+      })
 
       it('should indicate login failures', function() {
         page.login({
@@ -67,11 +68,13 @@ describe('Login View', function() {
           password: 'badPassword'
         });
 
-        expect(browser.getCurrentUrl()).to.eventually.equal(`${config.baseUrl}/login`);
+        expect(browser.getCurrentUrl()).to.eventually.equal(config.baseUrl + '/login');
 
         var helpBlock = page.form.element(by.css('.form-group.has-error .help-block.ng-binding'));
         expect(helpBlock.getText()).to.eventually.equal('This password is not correct.');
       });
+
     });
+
   });
 });

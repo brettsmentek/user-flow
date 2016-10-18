@@ -14,9 +14,9 @@ var SignupPage = function() {
   form.submit = form.element(by.css('.btn-register'));
 
   this.signup = function(data) {
-    for(var prop in data) {
+    for (var prop in data) {
       var formElem = form[prop];
-      if(data.hasOwnProperty(prop) && formElem && typeof formElem.sendKeys === 'function') {
+      if (data.hasOwnProperty(prop) && formElem && typeof formElem.sendKeys === 'function') {
         formElem.sendKeys(data[prop]);
       }
     }

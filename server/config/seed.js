@@ -50,15 +50,13 @@ User.sync()
       provider: 'local',
       name: 'Test User',
       email: 'test@example.com',
-      password: 'test',
-      data: '{}'
+      password: 'test'
     }, {
       provider: 'local',
       role: 'admin',
       name: 'Admin',
       email: 'admin@example.com',
-      password: 'admin',
-      data: '{}'
+      password: 'admin'
     }])
     .then(() => {
       console.log('finished populating users');
